@@ -152,7 +152,7 @@ class PaymentController extends Controller
 
             //Recipients
             //gửi từ ai
-            $mail->setFrom('timnguoiquen01@gmail.com', 'Gửi từ Digital World');
+            $mail->setFrom('timnguoiquen01@gmail.com', 'Gửi từ Dola-Bakery');
             //gửi tới ai
             $mail->addAddress($email);     // Add a recipient
             //    $mail->addAddress('ellen@example.com');               // Name is optional
@@ -168,7 +168,7 @@ class PaymentController extends Controller
             // Content
             $mail->isHTML(true);                                  // Set email format to HTML
             $mail->Subject = 'Cảm ơn bạn đã đặt hàng!';
-            $mail->Body    = "Chào $email, Cảm ơn bạn đã tin tưởng sử dụng sản phẩm của Digital World. Mong bạn sẽ hài lòng khi sử dụng dịch vụ từ chúng tôi.";
+            $mail->Body    = "Chào $email, Cảm ơn bạn đã tin tưởng sử dụng sản phẩm của Dola-Bakery. Mong bạn sẽ hài lòng khi sử dụng dịch vụ từ chúng tôi.";
             $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
             $mail->send();
@@ -197,7 +197,7 @@ class PaymentController extends Controller
     }
     public function online()
     {
-        $this->content = $this->render('configs/nganluong/index.php');
+        $this->content = $this->render('configs/vnpay_php/index.php');
         echo $this->content;
     }
 }

@@ -217,8 +217,6 @@
                                     <img src="assets/images/logo-banh.png" alt="Digital World" class="img-responsive" />
                                 </a>
                             </h1>
-
-
                             <h1 style="display:none">
                                 <a href="index.php?controller=home&action=index">Thế Giới Đồ Ăn</a>
                             </h1>
