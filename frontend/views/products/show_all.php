@@ -12,16 +12,11 @@
                             <div class="tool-sortby pull-left">
                                 <h2>Danh Sách Sản Phẩm</h2>
                             </div>
-
                         </div>
-
                     </div>
-
                     <div class="col-md-12 product-list">
                         <div class="content-product-list products-resize">
                             <div class="product-list-view row  grid  products-grid">
-
-
                                 <?php
                                 require_once 'helpers/Helper.php';
                                 foreach ($products as $product) :
@@ -29,12 +24,9 @@
                                     // url phải ở dạng rewrite
                                     $product_link = "chi-tiet-san-pham/$slug/" . $product['id'];
                                 ?>
-
                                     <div class="ajax_block_product col-xs-12 col-sm-6 col-md-4 col-lg-4 wow fadeInUp animation rainbow_0">
                                         <div class="product-item product-resize clearfix">
-
                                             <div class="left-block product-img image-resize">
-
                                                 <a href="<?php echo $product_link; ?>" title="<?php echo $product['title']; ?> - <?php echo $product['weight']; ?>">
                                                     <img alt=" <?php echo $product['title']; ?> - <?php echo $product['weight']; ?> " src="../backend/assets/uploads/<?php echo $product['avatar']; ?>" />
                                                 </a>
@@ -65,22 +57,9 @@
 
                                                 </p>
                                             </div>
-
-
                                         </div>
                                     </div>
                                 <?php endforeach; ?>
-
-
-
-
-
-
-
-
-
-
-
                             </div>
                         </div>
                     </div>
@@ -90,11 +69,9 @@
                 <!-- Sidebar menu-->
 
                 <div class="news-menu list-group" id="list-group-l">
-
                     <div class="menu-left-title">
                         <strong>Nhóm danh mục</strong>
                     </div>
-
                     <ul class="nav navs sidebar menu" id='cssmenu'>
                         <!--                        Danh muc san pham de loc-->
 
@@ -111,24 +88,20 @@
                                 }
                             }
                         ?>
-
                             <li class="item  first">
                                 <a>
                                     <input type="checkbox" name="category[]" <?php echo $checked; ?> value="<?php echo $category['id']; ?>" />
 
                                     <span><?php echo $category['name']; ?></span>
                                 </a>
-
                             </li>
                         <?php endforeach; ?>
                     </ul>
                 </div>
-
                 <div class="sidebar_price list-group">
                     <div class="menu-left-title">
                         <strong>Lọc theo giá</strong>
                     </div>
-
                     <?php
                     $checked_price1 = '';
                     $checked_price2 = '';
@@ -194,8 +167,6 @@
     </div>
     <!-- End collection info -->
     <!-- Begin no products -->
-
-
     <!-- End no products -->
 </div>
 </div>

@@ -60,6 +60,8 @@ class ProductController extends Controller
             $summary = $_POST['summary'];
             $content = $_POST['content'];
             $status = $_POST['status'];
+            $slnhap = $_POST['slnhap'];
+            $slxuat = $_POST['slxuat'];
 
             //xử lý validate
             if (empty($title)) {
@@ -108,6 +110,8 @@ class ProductController extends Controller
                 $product_model->content = $content;
                 $product_model->hot = $hot;
                 $product_model->status = $status;
+                $product_model->slnhap = $slnhap;
+                $product_model->slxuat = $slxuat;
                 $is_insert = $product_model->insert();
                 if ($is_insert) {
                     $_SESSION['success'] = 'Insert dữ liệu thành công';
@@ -169,6 +173,8 @@ class ProductController extends Controller
             $content = $_POST['content'];
             $hot = $_POST['hot'];
             $status = $_POST['status'];
+            $slnhap = $_POST['slnhap'];
+            $slxuat = $_POST['slxuat'];
             //xử lý validate
             if (empty($title)) {
                 $this->error = 'Không được để trống title';
@@ -216,6 +222,8 @@ class ProductController extends Controller
                 $product_model->hot = $hot;
                 $product_model->status = $status;
                 $product_model->updated_at = date('Y-m-d H:i:s');
+                $product_model->slnhap = $slnhap;
+                $product_model->slxuat = $slxuat;
                 $is_update = $product_model->update($id);
                 if ($is_update) {
                     $_SESSION['success'] = 'Update dữ liệu thành công';
@@ -256,4 +264,5 @@ class ProductController extends Controller
         header('Location: index.php?controller=product');
         exit();
     }
+    
 }

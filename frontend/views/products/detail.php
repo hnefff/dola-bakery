@@ -40,9 +40,6 @@
                             <div class="product-price" id="price-preview">
                                 <span><?php echo number_format($product['price']); ?>đ</span>
                             </div>
-
-
-
                             <form id="add-item-form" action="https://growmax.myharavan.com/cart/add" method="post" class="variants clearfix">
                                 <div class="select clearfix" style="display:none">
                                     <select id="product-select" name="id" style="display:none">

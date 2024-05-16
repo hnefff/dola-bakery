@@ -16,7 +16,7 @@ class User extends Model
 		$sql_select_once = "SELECT * FROM users WHERE `username` = :username";
 		$obj_select_one = $this->connection->prepare($sql_select_once);
 		$arr_select = [
-			':username' => $username
+			':username' => $username,
 		];
 		$obj_select_one->execute($arr_select);
 		$user = $obj_select_one->fetch(PDO::FETCH_ASSOC);

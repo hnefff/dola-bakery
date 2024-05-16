@@ -41,7 +41,6 @@ class Order extends Model
     }
 
 
-
     public function insert()
     {
         //1 - chuẩn bị câu truy vấn

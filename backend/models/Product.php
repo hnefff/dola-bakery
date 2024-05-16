@@ -17,6 +17,8 @@ class Product extends Model
     public $status;
     public $created_at;
     public $updated_at;
+    public $slnhap;
+    public $slxuat;
     /*
      * Chuỗi search, sinh tự động dựa vào tham số GET trên Url
      */
@@ -97,8 +99,8 @@ class Product extends Model
     public function insert()
     {
         $obj_insert = $this->connection
-            ->prepare("INSERT INTO products(category_id, title, avatar, price, weight, supplier, summary, content, hot, status) 
-                                VALUES (:category_id, :title, :avatar, :price, :weight, :supplier, :summary, :content, :hot, :status)");
+            ->prepare("INSERT INTO products(category_id, title, avatar, price, weight, supplier, summary, content, hot, status, slnhap, slxuat) 
+                                VALUES (:category_id, :title, :avatar, :price, :weight, :supplier, :summary, :content, :hot, :status, :slnhap, :slxuat)");
         $arr_insert = [
             ':category_id' => $this->category_id,
             ':title' => $this->title,
@@ -110,6 +112,8 @@ class Product extends Model
             ':content' => $this->content,
             ':hot' => $this->hot,
             ':status' => $this->status,
+            ':slnhap' => $this->slnhap,
+            ':slxuat' => $this->slxuat,
         ];
         return $obj_insert->execute($arr_insert);
     }
@@ -134,7 +138,7 @@ class Product extends Model
     {
         $obj_update = $this->connection
             ->prepare("UPDATE products SET category_id=:category_id, title=:title, avatar=:avatar, price=:price, weight=:weight,
-             supplier=:supplier, summary=:summary, content=:content, hot=:hot, status=:status, updated_at=:updated_at WHERE id = $id
+             supplier=:supplier, summary=:summary, content=:content, hot=:hot, status=:status, updated_at=:updated_at, slnhap=:slnhap, slxuat=:slxuat WHERE id = $id
 ");
         $arr_update = [
             ':category_id' => $this->category_id,
@@ -148,6 +152,8 @@ class Product extends Model
             ':hot' => $this->hot,
             ':status' => $this->status,
             ':updated_at' => $this->updated_at,
+            ':slnhap' => $this->slnhap,
+            ':slxuat' => $this->slxuat,
         ];
         return $obj_update->execute($arr_update);
     }

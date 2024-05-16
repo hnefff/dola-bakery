@@ -93,8 +93,9 @@ require_once 'helpers/Helper.php';
                             </tr>
                         </tbody>
                     </table>
-                <?php endif; ?>
 
+                <?php endif;
+                ?>
             </div>
         </div>
         <input type="submit" name="submit" value="Thanh toán" class="btn btn-primary">

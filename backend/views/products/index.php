@@ -49,6 +49,8 @@ require_once 'helpers/Helper.php';
         <th>Status</th>
         <th>Created_at</th>
         <th>Updated_at</th>
+        <th>Số lượng nhập</th>
+        <th>Số lượng xuất</th>
         <th></th>
     </tr>
     <?php if (!empty($products)): ?>
@@ -69,6 +71,8 @@ require_once 'helpers/Helper.php';
                 <td><?php echo Helper::getStatusText($product['status']) ?></td>
                 <td><?php echo date('d-m-Y H:i:s', strtotime($product['created_at'])) ?></td>
                 <td><?php echo !empty($product['updated_at']) ? date('d-m-Y H:i:s', strtotime($product['updated_at'])) : '--' ?></td>
+                <td><?php echo $product['slnhap'] ?></td>
+                <td><?php echo $product['slxuat'] ?></td>
                 <td>
                     <?php
                     $url_detail = "index.php?controller=product&action=detail&id=" . $product['id'];

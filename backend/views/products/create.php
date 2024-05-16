@@ -79,6 +79,16 @@
         </select>
     </div>
     <div class="form-group">
+        <label for="slnhap">Số lượng nhập</label>
+        <input type="number" name="slnhap" value="<?php echo isset($_POST['slnhap']) ? $_POST['slnhap'] : '' ?>"
+               class="form-control" id="slnhap"/>
+    </div>
+    <div class="form-group">
+        <label for="slxuat">Số lượng xuất</label>
+        <input type="number" name="slxuat" value="<?php echo isset($_POST['slxuat']) ? $_POST['slxuat'] : '' ?>"
+               class="form-control" id="slxuat"/>
+    </div>
+    <div class="form-group">
         <input type="submit" name="submit" value="Save" class="btn btn-primary"/>
         <a href="index.php?controller=product&action=index" class="btn btn-default">Back</a>
     </div>

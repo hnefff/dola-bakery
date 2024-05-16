@@ -54,5 +54,13 @@ require_once 'helpers/Helper.php';
         <th>Updated at</th>
         <td><?php echo !empty($product['updated_at']) ? date('d-m-Y H:i:s', strtotime($product['updated_at'])) : '--' ?></td>
     </tr>
+    <tr>
+        <th>Số lượng nhập</th>
+        <td><?php echo $product['slnhap']?></td>
+    </tr>
+    <tr>
+        <th>Số lượng xuất</th>
+        <td><?php echo $product['slxuat']?></td>
+    </tr>
 </table>
 <a href="index.php?controller=product&action=index" class="btn btn-default">Back</a>

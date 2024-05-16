@@ -56,17 +56,30 @@ class Product extends Model
         return $product;
     }
 
-    public function getByHot()
-    {
+    // public function getByHot()
+    // {
+    //     $sql_select_hot = "SELECT products.*, categories.name AS category_name
+    //         FROM products
+    //         INNER JOIN categories 
+    //         ON products.category_id = categories.id
+    //         WHERE hot = 1
+    //          ORDER BY id DESC LIMIT 8";
+    //     $obj_select_hot = $this->connection->prepare($sql_select_hot);
+    //     $obj_select_hot->execute();
+    //     $product = $obj_select_hot->fetchAll(PDO::FETCH_ASSOC);
+    //     return $product;
+    // }
+    
+    public function getByHot(){
         $sql_select_hot = "SELECT products.*, categories.name AS category_name
             FROM products
             INNER JOIN categories 
             ON products.category_id = categories.id
-            WHERE hot = 1
-             ORDER BY id DESC LIMIT 8";
+            ORDER BY slxuat DESC LIMIT 8";
         $obj_select_hot = $this->connection->prepare($sql_select_hot);
         $obj_select_hot->execute();
         $product = $obj_select_hot->fetchAll(PDO::FETCH_ASSOC);
         return $product;
+       
     }
 }
