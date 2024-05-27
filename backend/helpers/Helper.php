@@ -6,10 +6,10 @@ class Helper
   const STATUS_DISABLED = 0;
   const STATUS_ACTIVE_TEXT = 'Active';
   const STATUS_DISABLED_TEXT = 'Disabled';
-  const STATUS_INACTIVE_TEXT_ORDER = "<span style='padding:4px;color:#fff;background: red;width:65px;display:inline-block;
-border-radius:5px;text-align:center'>Đang chờ</span>";
-  const STATUS_ACTIVE_TEXT_ORDER = "<span style='padding:4px;color:#fff;background: green;width:65px;display:inline-block;
-border-radius:5px;text-align: center'>Đã xong</span>";
+  const STATUS_INACTIVE_TEXT_ORDER = "<span style='padding:4px;color:#fff;background: red;width:100px;display:inline-block;
+border-radius:5px;text-align:center'>Đang giao hàng</span>";
+  const STATUS_ACTIVE_TEXT_ORDER = "<span style='padding:4px;color:#fff;background: green;width:100px;display:inline-block;
+border-radius:5px;text-align: center'>Đã giao hàng</span>";
 
   /**
    * Get status text

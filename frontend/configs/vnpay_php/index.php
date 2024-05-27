@@ -19,16 +19,10 @@
     <div class="container">
            <div class="header clearfix">
 
-                <h3 class="text-muted">VNPAY DEMO</h3>
+                <h3 class="text-muted"> Thanh toán online</h3>
             </div>
                 <div class="form-group">
                     <button onclick="pay()">Giao dịch thanh toán</button><br>
-                </div>
-                <div class="form-group">
-                    <button onclick="querydr()">API truy vấn kết quả thanh toán</button><br>
-                </div>
-                <div class="form-group">
-                    <button onclick="refund()">API hoàn tiền giao dịch</button><br>
                 </div>
             <p>
                 &nbsp;
@@ -40,12 +34,6 @@
         <script>
              function pay() {
               window.location.href = "/vnpay_php/vnpay_pay.php";
-            }
-            function querydr() {
-              window.location.href = "/vnpay_php/vnpay_querydr.php";
-            }
-             function refund() {
-              window.location.href = "/vnpay_php/vnpay_refund.php";
             }
         </script>
     </body>

@@ -9,8 +9,6 @@ class OrderDetail extends Model
     public $product_id;
     public $quality;
 
-    
-
     public function insert()
     {
         $sql_insert = "INSERT INTO order_details(`order_id`, `product_id`, `quality`) VALUE (:order_id, :product_id, :quality)";
@@ -28,8 +26,8 @@ class OrderDetail extends Model
             ':quality' => $this->quality,
             ':product_id' => $this->product_id,
         ];
+        
         $is_update = $obj_updatesl->execute($arr_updatesl);
-
         if ($is_insert && $is_update)
             $rs = true;
         else
